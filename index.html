@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harini N | Computer Science and Engineering Student | Developer Portfolio</title>
+  <title>Harini N | Computer Science & Engineering Student</title>
   
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Portfolio of Harini N, a Computer Science and Engineering student at Easwari Engineering College, showcasing projects, technical skills, coding journey and resume.">
-  <meta name="keywords" content="Harini N, Computer Science, Easwari Engineering College, Portfolio, Software Developer, Java, Python, C, MongoDB, Machine Learning, DSA">
+  <meta name="description" content="Professional portfolio of Harini N, Computer Science and Engineering student at Easwari Engineering College.">
+  <meta name="keywords" content="Harini N, Computer Science, Easwari Engineering College, Portfolio, Software Developer, Java, Python, C++, Web Development, DSA">
   <meta name="author" content="Harini N">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph / LinkedIn / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Harini N | Computer Science and Engineering Student | Developer Portfolio">
-  <meta property="og:description" content="Portfolio of Harini N, a Computer Science and Engineering student at Easwari Engineering College, showcasing projects, technical skills, coding journey and resume.">
+  <meta property="og:title" content="Harini N | Computer Science & Engineering Student">
+  <meta property="og:description" content="Professional portfolio of Harini N, Computer Science and Engineering student at Easwari Engineering College.">
+  <meta property="og:url" content="https://harini311207.github.io/">
   <meta property="og:site_name" content="Harini N Portfolio">
 
   <!-- Twitter Meta -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Harini N | Developer Portfolio">
-  <meta name="twitter:description" content="Computer Science and Engineering student at Easwari Engineering College. Portfolio showcasing projects, technical skills, and resume.">
+  <meta name="twitter:title" content="Harini N | Computer Science & Engineering Student">
+  <meta name="twitter:description" content="Professional portfolio of Harini N, Computer Science and Engineering student at Easwari Engineering College.">
 
-  <!-- Favicon (Inline SVG Gradient) -->
+  <!-- Favicon (Inline SVG Brand Icon) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-weight='800' font-size='50'>HN</text></svg>">
 
   <!-- Stylesheet -->
@@ -30,50 +31,50 @@
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- DevIcon for clean tech icons -->
+  <!-- DevIcon for clean official technology badges -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
 
-  <!-- Dynamic Aurora Animated Backdrop -->
-  <div class="aurora-backdrop" aria-hidden="true">
-    <div class="aurora-blob aurora-blob-1"></div>
-    <div class="aurora-blob aurora-blob-2"></div>
-    <div class="aurora-blob aurora-blob-3"></div>
-    <div class="grid-overlay"></div>
+  <!-- Subtle Ambient Backdrop (Human Editorial Style - No AI Floating Blobs) -->
+  <div class="ambient-backdrop" aria-hidden="true">
+    <div class="ambient-glow top-left"></div>
+    <div class="ambient-glow bottom-right"></div>
+    <div class="fine-grid-overlay"></div>
   </div>
 
-  <!-- Fixed Glass Header -->
+  <!-- Sliding Portfolio Progress Bar -->
+  <div class="slide-progress-container" aria-hidden="true">
+    <div id="slide-progress-bar" class="slide-progress-bar"></div>
+  </div>
+
+  <!-- Fixed Top Header -->
   <header class="site-header" role="banner">
     <a href="#home" class="header-brand" aria-label="Harini N - Back to Home">
-      <span class="brand-badge">HN</span>
-      <span>Harini N</span>
+      <span class="brand-monogram">HN</span>
+      <span class="brand-text">Harini N</span>
     </a>
 
     <!-- Main Navigation Menu -->
     <nav aria-label="Main Navigation">
       <ul class="nav-links" id="nav-links-menu">
-        <li><a href="#home" class="nav-link active" data-target="home">HOME</a></li>
-        <li><a href="#about" class="nav-link" data-target="about">ABOUT</a></li>
-        <li><a href="#skills" class="nav-link" data-target="skills">SKILLS</a></li>
-        <li><a href="#projects" class="nav-link" data-target="projects">PROJECTS</a></li>
-        <li><a href="#education" class="nav-link" data-target="education">EDUCATION</a></li>
-        <li><a href="#achievements" class="nav-link" data-target="achievements">ACHIEVEMENTS</a></li>
-        <li><a href="#learning" class="nav-link" data-target="learning">LEARNING</a></li>
-        <li><a href="#resume" class="nav-link" data-target="resume">RESUME</a></li>
-        <li><a href="#contact" class="nav-link" data-target="contact">CONTACT</a></li>
+        <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-target="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-target="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-target="projects">Projects</a></li>
+        <li><a href="#education" class="nav-link" data-target="education">Education</a></li>
+        <li><a href="#achievements" class="nav-link" data-target="achievements">Achievements</a></li>
+        <li><a href="#learning" class="nav-link" data-target="learning">Learning</a></li>
+        <li><a href="#resume" class="nav-link" data-target="resume">Resume</a></li>
+        <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Header Actions (Theme Toggle & Admin portal) -->
+    <!-- Header Actions -->
     <div class="header-actions">
       <button id="theme-toggle-btn" class="icon-button" aria-label="Toggle Light and Dark Mode" title="Toggle theme">
         <i id="theme-icon" class="fas fa-sun"></i>
       </button>
-
-      <a href="admin.html" class="btn-admin-link" title="Owner Administration Portal">
-        <i class="fas fa-lock"></i> OWNER
-      </a>
 
       <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
         <i class="fas fa-bars"></i>
@@ -85,38 +86,47 @@
   <aside class="slide-indicators" aria-label="Slide Indicator">
     <button class="indicator-item active" data-index="0" aria-label="Slide 1: Home">
       <span class="indicator-number">01</span>
+      <span class="indicator-label">Home</span>
       <span class="indicator-dot"></span>
     </button>
     <button class="indicator-item" data-index="1" aria-label="Slide 2: About">
       <span class="indicator-number">02</span>
+      <span class="indicator-label">About</span>
       <span class="indicator-dot"></span>
     </button>
     <button class="indicator-item" data-index="2" aria-label="Slide 3: Skills">
       <span class="indicator-number">03</span>
+      <span class="indicator-label">Skills</span>
       <span class="indicator-dot"></span>
     </button>
     <button class="indicator-item" data-index="3" aria-label="Slide 4: Projects">
       <span class="indicator-number">04</span>
+      <span class="indicator-label">Projects</span>
       <span class="indicator-dot"></span>
     </button>
     <button class="indicator-item" data-index="4" aria-label="Slide 5: Education">
       <span class="indicator-number">05</span>
+      <span class="indicator-label">Education</span>
       <span class="indicator-dot"></span>
     </button>
     <button class="indicator-item" data-index="5" aria-label="Slide 6: Achievements">
       <span class="indicator-number">06</span>
+      <span class="indicator-label">Achievements</span>
       <span class="indicator-dot"></span>
     </button>
     <button class="indicator-item" data-index="6" aria-label="Slide 7: Currently Learning">
       <span class="indicator-number">07</span>
+      <span class="indicator-label">Learning</span>
       <span class="indicator-dot"></span>
     </button>
     <button class="indicator-item" data-index="7" aria-label="Slide 8: Resume">
       <span class="indicator-number">08</span>
+      <span class="indicator-label">Resume</span>
       <span class="indicator-dot"></span>
     </button>
     <button class="indicator-item" data-index="8" aria-label="Slide 9: Contact">
       <span class="indicator-number">09</span>
+      <span class="indicator-label">Contact</span>
       <span class="indicator-dot"></span>
     </button>
   </aside>
@@ -139,56 +149,90 @@
     <div id="slider-track">
 
       <!-- ====================================================================
-           SLIDE 01: HOME / HERO
+           01 — HOME
            ==================================================================== -->
       <section id="slide-01" class="slide" data-slide="home" aria-label="Home">
         <div class="slide-content-wrap">
-          <div class="hero-grid">
-            <div class="hero-content">
-              <span class="hero-greeting">Hi, I'm</span>
-              <h1 class="hero-name">Harini N</h1>
-              <p class="hero-headline">Computer Science and Engineering Student</p>
-              <p class="hero-tags">Developer | Problem Solver | Aspiring Software Engineer</p>
-              <p class="hero-intro">
-                Computer Science Engineering student with a strong interest in software development, problem solving, and emerging technologies. Actively building skills through coding practice, projects, certifications, and hackathons, with a goal of gaining practical industry experience.
+          <div class="hero-layout">
+            <div class="hero-left">
+              <div class="section-tag-row">
+                <span class="section-tag">01 // PORTFOLIO</span>
+                <span class="status-indicator"><span class="status-dot"></span> Easwari Engineering College</span>
+              </div>
+              
+              <h1 class="hero-title">HARINI N</h1>
+              <p class="hero-subtitle">Computer Science &amp; Engineering Student</p>
+              <p class="hero-role-line">Developer &bull; Problem Solver &bull; Aspiring Software Engineer</p>
+
+              <p class="hero-bio">
+                I'm Harini, a Computer Science and Engineering student who enjoys building practical applications and improving my problem-solving skills.
               </p>
 
               <!-- Hero Call-to-Actions -->
-              <div class="hero-cta-group">
-                <a href="#projects" class="btn-primary" onclick="window.SuperSliderInstance?.goToSlide(3)">
-                  <i class="fas fa-layer-group"></i> VIEW MY PROJECTS
+              <div class="hero-actions">
+                <a href="#projects" class="btn-primary" id="hero-btn-projects">
+                  <span>VIEW PROJECTS</span>
+                  <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="#resume" class="btn-secondary" onclick="window.SuperSliderInstance?.goToSlide(7)">
-                  <i class="fas fa-file-alt"></i> VIEW RESUME
+                <a href="#resume" class="btn-secondary" id="hero-btn-resume">
+                  <span>VIEW RESUME</span>
+                  <i class="fas fa-file-pdf"></i>
                 </a>
-                <a href="#contact" class="btn-secondary" onclick="window.SuperSliderInstance?.goToSlide(8)">
-                  <i class="fas fa-paper-plane"></i> CONTACT ME
+                <a href="#contact" class="btn-secondary" id="hero-btn-contact">
+                  <span>CONTACT ME</span>
+                  <i class="fas fa-envelope"></i>
                 </a>
               </div>
 
               <!-- Social Profiles -->
-              <div class="hero-social-group">
-                <a href="https://github.com/harini311207" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub Profile" title="Harini N on GitHub">
+              <div class="hero-social-strip">
+                <a href="https://github.com/harini311207" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Harini N on GitHub" title="GitHub Profile">
                   <i class="fab fa-github"></i>
+                  <span>GitHub</span>
                 </a>
-                <a href="https://www.linkedin.com/in/harini-neelakandan/" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn Profile" title="Harini N on LinkedIn">
+                <a href="https://www.linkedin.com/in/harini-neelakandan/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Harini N on LinkedIn" title="LinkedIn Profile">
                   <i class="fab fa-linkedin-in"></i>
+                  <span>LinkedIn</span>
                 </a>
-                <a href="mailto:harining205@gmail.com" class="btn-icon" aria-label="Send Email" title="Email Harini N">
+                <a href="mailto:harining205@gmail.com" class="social-link" aria-label="Email Harini N" title="Email Harini N">
                   <i class="fas fa-envelope"></i>
+                  <span>harining205@gmail.com</span>
                 </a>
               </div>
             </div>
 
-            <!-- Profile Summary Visual Glass Box -->
-            <div class="hero-visual-card glass-card">
-              <div class="floating-avatar-box">
-                <div class="avatar-initials-badge">HN</div>
-                <h2 class="avatar-title">Harini N</h2>
-                <p class="avatar-inst">Easwari Engineering College</p>
-                <div class="stat-pills-row">
-                  <span class="stat-pill"><i class="fas fa-graduation-cap"></i> 8.915 CGPA</span>
-                  <span class="stat-pill"><i class="fas fa-trophy"></i> 5+ Hackathons</span>
+            <!-- Hero Right Editorial Column -->
+            <div class="hero-right">
+              <div class="editorial-stat-card">
+                <div class="stat-header">
+                  <span class="stat-tag">ACADEMIC SNAPSHOT</span>
+                  <span class="stat-accent-number">8.915</span>
+                </div>
+                <h2 class="stat-degree">B.E. Computer Science &amp; Engineering</h2>
+                <p class="stat-institution">Easwari Engineering College</p>
+                <div class="stat-metrics-divider"></div>
+                <div class="stat-feature-list">
+                  <div class="stat-feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <div>
+                      <strong>5+ Hackathons</strong>
+                      <p>Teamwork, ideation, and rapid prototyping</p>
+                    </div>
+                  </div>
+                  <div class="stat-feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <div>
+                      <strong>Core DSA Practice</strong>
+                      <p>Active focus on algorithmic problem solving</p>
+                    </div>
+                  </div>
+                  <div class="stat-feature-item">
+                    <i class="fas fa-check-circle feature-icon"></i>
+                    <div>
+                      <strong>Full-Stack &amp; ML Projects</strong>
+                      <p>Practical software and image analysis systems</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -197,62 +241,78 @@
       </section>
 
       <!-- ====================================================================
-           SLIDE 02: ABOUT ME
+           02 — ABOUT
            ==================================================================== -->
-      <section id="slide-02" class="slide" data-slide="about" aria-label="About Me">
+      <section id="slide-02" class="slide" data-slide="about" aria-label="About">
         <div class="slide-content-wrap">
           <div class="slide-header">
-            <span class="slide-tag"><i class="fas fa-user"></i> Slide 02</span>
-            <h2 class="slide-title">About <span class="gradient-text">Me</span></h2>
-            <p class="slide-subtitle">Academic background, technical focus, and hands-on drive.</p>
+            <span class="section-tag">02 // PROFILE</span>
+            <h2 class="slide-title">About <span class="accent-text">Harini N</span></h2>
+            <p class="slide-subtitle">Academic background, technical focus, and engineering perspective.</p>
           </div>
 
-          <div class="about-grid">
-            <div class="about-narrative glass-card">
-              <p>
-                I am Harini N, a B.E. Computer Science and Engineering student at Easwari Engineering College with a CGPA of 8.915.
+          <div class="about-editorial-grid">
+            <div class="about-narrative-column">
+              <p class="narrative-lead">
+                I am a B.E. Computer Science and Engineering student at Easwari Engineering College with a CGPA of 8.915.
               </p>
-              <p>
-                I have a strong interest in software development, problem solving, and emerging technologies.
+              <p class="narrative-body">
+                I enjoy building practical applications and continuously developing my skills across programming, software development, and problem solving. I value clean code, functional architectures, and well-thought-out system designs.
               </p>
-              <p>
-                I have been building projects and improving my coding skills through hands-on development, continuous DSA practice, industry certifications, and hackathons.
+              <p class="narrative-body">
+                Through coursework, personal projects, and competitive hackathons, I actively practice Data Structures and Algorithms while exploring modern web development and intelligent computing.
               </p>
-              <p>
-                I have participated in 5+ hackathons, gaining hands-on experience in teamwork, ideation, and rapid prototyping.
-              </p>
+
+              <!-- Authentic Focus Areas -->
+              <div class="focus-areas-block">
+                <span class="block-title">Key Development Areas:</span>
+                <div class="focus-tag-cloud">
+                  <span class="focus-tag"><i class="fas fa-terminal"></i> Programming</span>
+                  <span class="focus-tag"><i class="fas fa-globe"></i> Web Development</span>
+                  <span class="focus-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+                  <span class="focus-tag"><i class="fas fa-code-branch"></i> Software Development</span>
+                  <span class="focus-tag"><i class="fas fa-network-wired"></i> Data Structures and Algorithms</span>
+                </div>
+              </div>
             </div>
 
-            <!-- Authentic Identity Card -->
-            <div class="identity-card glass-card">
-              <div class="identity-card-header">
-                <i class="fas fa-id-badge identity-icon"></i>
-                <h3 class="identity-card-title">Identity & Credentials</h3>
-              </div>
+            <!-- Credentials Factsheet -->
+            <div class="about-factsheet-column">
+              <div class="factsheet-panel">
+                <div class="factsheet-header">
+                  <i class="fas fa-user-graduate factsheet-icon"></i>
+                  <span class="factsheet-title">Academic Credentials</span>
+                </div>
 
-              <div class="identity-field">
-                <span class="field-label">Name</span>
-                <span class="field-value">Harini N</span>
-              </div>
+                <div class="factsheet-entry">
+                  <span class="entry-label">Name</span>
+                  <span class="entry-value">Harini N</span>
+                </div>
 
-              <div class="identity-field">
-                <span class="field-label">College</span>
-                <span class="field-value">Easwari Engineering College</span>
-              </div>
+                <div class="factsheet-entry">
+                  <span class="entry-label">Institution</span>
+                  <span class="entry-value">Easwari Engineering College</span>
+                </div>
 
-              <div class="identity-field">
-                <span class="field-label">Degree</span>
-                <span class="field-value">B.E. Computer Science and Engineering</span>
-              </div>
+                <div class="factsheet-entry">
+                  <span class="entry-label">Degree</span>
+                  <span class="entry-value">B.E. Computer Science and Engineering</span>
+                </div>
 
-              <div class="identity-field">
-                <span class="field-label">Academic CGPA</span>
-                <span class="field-value highlight">8.915</span>
-              </div>
+                <div class="factsheet-entry">
+                  <span class="entry-label">Academic CGPA</span>
+                  <span class="entry-value highlight">8.915</span>
+                </div>
 
-              <div class="identity-field">
-                <span class="field-label">Hackathons</span>
-                <span class="field-value highlight">5+ Participated</span>
+                <div class="factsheet-entry">
+                  <span class="entry-label">Hackathons</span>
+                  <span class="entry-value highlight">5+ Participated</span>
+                </div>
+
+                <div class="factsheet-entry">
+                  <span class="entry-label">Email</span>
+                  <a href="mailto:harining205@gmail.com" class="entry-link">harining205@gmail.com</a>
+                </div>
               </div>
             </div>
           </div>
@@ -260,207 +320,265 @@
       </section>
 
       <!-- ====================================================================
-           SLIDE 03: SKILLS
+           03 — SKILLS
            ==================================================================== -->
       <section id="slide-03" class="slide" data-slide="skills" aria-label="Skills">
         <div class="slide-content-wrap">
           <div class="slide-header">
-            <span class="slide-tag"><i class="fas fa-code"></i> Slide 03</span>
-            <h2 class="slide-title">Technical <span class="gradient-text">Skills</span></h2>
-            <p class="slide-subtitle">Verified technical competencies from official resume.</p>
+            <span class="section-tag">03 // TECHNICAL STACK</span>
+            <h2 class="slide-title">Technical <span class="accent-text">Skills</span></h2>
+            <p class="slide-subtitle">Languages and technologies used across coursework and software projects.</p>
           </div>
 
-          <div class="skills-grid">
-            <!-- Programming Languages -->
-            <div class="skill-category-card glass-card">
-              <div class="category-header">
-                <i class="fas fa-terminal category-icon"></i>
-                <h3 class="category-title">Programming</h3>
+          <div class="skills-editorial-container">
+            <div class="skills-grid-clean">
+              
+              <!-- Python -->
+              <div class="skill-tile">
+                <div class="skill-tile-top">
+                  <i class="devicon-python-plain colored skill-tile-icon"></i>
+                  <span class="skill-tile-type">Language</span>
+                </div>
+                <h3 class="skill-tile-name">Python</h3>
+                <p class="skill-tile-desc">Used in machine learning exploration, automation scripts, and image analysis pipelines.</p>
               </div>
-              <div class="skills-pill-group">
-                <div class="skill-item-badge">
-                  <i class="devicon-python-plain colored"></i>
-                  <span>Python</span>
+
+              <!-- C++ -->
+              <div class="skill-tile">
+                <div class="skill-tile-top">
+                  <i class="devicon-cplusplus-plain colored skill-tile-icon"></i>
+                  <span class="skill-tile-type">Language</span>
                 </div>
-                <div class="skill-item-badge">
-                  <i class="devicon-java-plain colored"></i>
-                  <span>Java</span>
-                </div>
-                <div class="skill-item-badge">
-                  <i class="devicon-c-plain colored"></i>
-                  <span>C</span>
-                </div>
+                <h3 class="skill-tile-name">C++</h3>
+                <p class="skill-tile-desc">Applied in algorithmic problem solving, object-oriented concepts, and performance logic.</p>
               </div>
+
+              <!-- Java -->
+              <div class="skill-tile">
+                <div class="skill-tile-top">
+                  <i class="devicon-java-plain colored skill-tile-icon"></i>
+                  <span class="skill-tile-type">Language</span>
+                </div>
+                <h3 class="skill-tile-name">Java</h3>
+                <p class="skill-tile-desc">Applied in backend development, object-oriented software design, and academic management systems.</p>
+              </div>
+
+              <!-- HTML -->
+              <div class="skill-tile">
+                <div class="skill-tile-top">
+                  <i class="devicon-html5-plain colored skill-tile-icon"></i>
+                  <span class="skill-tile-type">Web Core</span>
+                </div>
+                <h3 class="skill-tile-name">HTML</h3>
+                <p class="skill-tile-desc">Semantic document structuring, accessible forms, and standards-compliant layouts.</p>
+              </div>
+
+              <!-- CSS -->
+              <div class="skill-tile">
+                <div class="skill-tile-top">
+                  <i class="devicon-css3-plain colored skill-tile-icon"></i>
+                  <span class="skill-tile-type">Web Core</span>
+                </div>
+                <h3 class="skill-tile-name">CSS</h3>
+                <p class="skill-tile-desc">Responsive layouts, Flexbox/Grid systems, custom design tokens, and smooth micro-interactions.</p>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="skill-tile">
+                <div class="skill-tile-top">
+                  <i class="devicon-javascript-plain colored skill-tile-icon"></i>
+                  <span class="skill-tile-type">Web Logic</span>
+                </div>
+                <h3 class="skill-tile-name">JavaScript</h3>
+                <p class="skill-tile-desc">DOM manipulation, event handling, asynchronous workflows, and interactive web functionality.</p>
+              </div>
+
             </div>
 
-            <!-- Core Strengths -->
-            <div class="skill-category-card glass-card">
-              <div class="category-header">
-                <i class="fas fa-brain category-icon"></i>
-                <h3 class="category-title">Core Disciplines</h3>
-              </div>
-              <div class="skills-pill-group">
-                <div class="skill-item-badge">
-                  <i class="fas fa-network-wired"></i>
-                  <span>Data Structures & Algorithms</span>
-                </div>
-                <div class="skill-item-badge">
-                  <i class="fas fa-lightbulb"></i>
-                  <span>Problem Solving</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Database & Focus Areas -->
-            <div class="skill-category-card glass-card">
-              <div class="category-header">
-                <i class="fas fa-database category-icon"></i>
-                <h3 class="category-title">Database & Focus Areas</h3>
-              </div>
-              <div class="skills-pill-group">
-                <div class="skill-item-badge">
-                  <i class="devicon-mongodb-plain colored"></i>
-                  <span>MongoDB</span>
-                </div>
-                <div class="skill-item-badge">
-                  <i class="fas fa-globe"></i>
-                  <span>Web Development</span>
-                </div>
-                <div class="skill-item-badge">
-                  <i class="fas fa-robot"></i>
-                  <span>Machine Learning</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Developer Tools -->
-            <div class="skill-category-card glass-card">
-              <div class="category-header">
-                <i class="fas fa-tools category-icon"></i>
-                <h3 class="category-title">Developer Tools</h3>
-              </div>
-              <div class="skills-pill-group">
-                <div class="skill-item-badge">
-                  <i class="devicon-git-plain colored"></i>
-                  <span>Git</span>
-                </div>
-                <div class="skill-item-badge">
-                  <i class="devicon-github-original colored"></i>
-                  <span>GitHub</span>
-                </div>
-              </div>
+            <!-- Skills Note -->
+            <div class="skills-editorial-footer">
+              <i class="fas fa-info-circle"></i>
+              <span>Authentic skills based on verified coursework, project development, and practical programming.</span>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ====================================================================
-           SLIDE 04: PROJECTS
+           04 — PROJECTS
            ==================================================================== -->
       <section id="slide-04" class="slide" data-slide="projects" aria-label="Projects">
         <div class="slide-content-wrap">
           <div class="slide-header">
-            <span class="slide-tag"><i class="fas fa-laptop-code"></i> Slide 04</span>
-            <h2 class="slide-title">Featured <span class="gradient-text">Projects</span></h2>
-            <p class="slide-subtitle">Hands-on applications built with full-stack engineering and intelligent computing.</p>
+            <span class="section-tag">04 // PORTFOLIO WORK</span>
+            <h2 class="slide-title">Featured <span class="accent-text">Projects</span></h2>
+            <p class="slide-subtitle">Applications built for academic management, daily utility, and intelligent disease detection.</p>
           </div>
 
-          <!-- Project Category Filter Bar -->
-          <div class="projects-filter-bar" role="tablist" aria-label="Project Categories">
-            <button class="filter-btn active" data-filter="ALL" role="tab">ALL</button>
-            <button class="filter-btn" data-filter="ML" role="tab">ML</button>
-            <button class="filter-btn" data-filter="PYTHON" role="tab">PYTHON</button>
-            <button class="filter-btn" data-filter="WEB" role="tab">WEB</button>
-            <button class="filter-btn" data-filter="JAVA" role="tab">JAVA</button>
-          </div>
-
-          <!-- Projects Grid -->
-          <div class="projects-grid">
+          <!-- Editorial Project Carousel / Layout -->
+          <div class="projects-editorial-container">
             
-            <!-- Project 1: Plant Disease Detector -->
-            <article class="project-card glass-card" data-categories="PYTHON,ML">
-              <div>
-                <div class="project-card-header">
-                  <span class="project-badge">Machine Learning & Vision</span>
+            <!-- PROJECT 01 -->
+            <article class="project-editorial-row" id="project-card-01">
+              <div class="project-info-block">
+                <div class="project-number-badge">PROJECT 01</div>
+                <h3 class="project-editorial-title">Student Grade Management System</h3>
+                <p class="project-editorial-desc">
+                  A web application for managing student academic results digitally. Admin creates accounts, faculty enters internal and external marks, and the system calculates total, percentage, grade, GPA and CGPA. Students can view and print their grade reports.
+                </p>
+
+                <div class="project-tech-pills">
+                  <span class="tech-pill">Java</span>
+                  <span class="tech-pill">Spring Boot</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">HTML</span>
+                  <span class="tech-pill">CSS</span>
+                  <span class="tech-pill">JavaScript</span>
                 </div>
-                <h3 class="project-title">Plant Disease Detector</h3>
-                <p class="project-desc">
+
+                <div class="project-actions-strip">
+                  <a href="https://github.com/harini311207/Student-grade-management-system" target="_blank" rel="noopener noreferrer" class="btn-github-project">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub Repository</span>
+                    <i class="fas fa-arrow-up-right-from-square external-arrow"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Visual Architecture Graphic -->
+              <div class="project-visual-block">
+                <div class="visual-panel">
+                  <div class="panel-tag"><i class="fas fa-sitemap"></i> System Workflow</div>
+                  <div class="workflow-steps">
+                    <div class="workflow-node">
+                      <span class="node-role">Admin</span>
+                      <span class="node-action">Account Management</span>
+                    </div>
+                    <div class="workflow-connector"><i class="fas fa-arrow-right"></i></div>
+                    <div class="workflow-node">
+                      <span class="node-role">Faculty</span>
+                      <span class="node-action">Internal &amp; External Marks</span>
+                    </div>
+                    <div class="workflow-connector"><i class="fas fa-arrow-right"></i></div>
+                    <div class="workflow-node">
+                      <span class="node-role">Engine</span>
+                      <span class="node-action">GPA &amp; CGPA Computation</span>
+                    </div>
+                    <div class="workflow-connector"><i class="fas fa-arrow-right"></i></div>
+                    <div class="workflow-node highlight-node">
+                      <span class="node-role">Student</span>
+                      <span class="node-action">View &amp; Print Grade Card</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 02 -->
+            <article class="project-editorial-row" id="project-card-02">
+              <div class="project-info-block">
+                <div class="project-number-badge">PROJECT 02</div>
+                <h3 class="project-editorial-title">Student Expense Tracker</h3>
+                <p class="project-editorial-desc">
+                  A simple web application for tracking and managing daily student expenses. Designed with an accessible interface to record expenditures, monitor spending habits, and categorize day-to-day outlays efficiently.
+                </p>
+
+                <div class="project-tech-pills">
+                  <span class="tech-pill">HTML</span>
+                  <span class="tech-pill">CSS</span>
+                  <span class="tech-pill">JavaScript</span>
+                </div>
+
+                <div class="project-actions-strip">
+                  <a href="https://github.com/harini311207/Student-expense-tracker" target="_blank" rel="noopener noreferrer" class="btn-github-project">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub Repository</span>
+                    <i class="fas fa-arrow-up-right-from-square external-arrow"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Visual Expense Graphic -->
+              <div class="project-visual-block">
+                <div class="visual-panel">
+                  <div class="panel-tag"><i class="fas fa-wallet"></i> Application Scope</div>
+                  <div class="tracker-features-grid">
+                    <div class="tracker-feature">
+                      <i class="fas fa-plus-circle tracker-icon"></i>
+                      <div>
+                        <strong>Daily Logging</strong>
+                        <p>Instant recording of daily items &amp; amounts</p>
+                      </div>
+                    </div>
+                    <div class="tracker-feature">
+                      <i class="fas fa-layer-group tracker-icon"></i>
+                      <div>
+                        <strong>Categorization</strong>
+                        <p>Food, Books, Travel &amp; Miscellaneous</p>
+                      </div>
+                    </div>
+                    <div class="tracker-feature">
+                      <i class="fas fa-chart-pie tracker-icon"></i>
+                      <div>
+                        <strong>Real-time Totals</strong>
+                        <p>Dynamic expenditure summaries</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 03 -->
+            <article class="project-editorial-row" id="project-card-03">
+              <div class="project-info-block">
+                <div class="project-number-badge">PROJECT 03</div>
+                <h3 class="project-editorial-title">Plant Disease Detector</h3>
+                <p class="project-editorial-desc">
                   Developed a project focused on identifying plant diseases using image-based analysis. Explored machine learning concepts for disease classification and early detection. Designed the solution with practical application for supporting plant health monitoring.
                 </p>
 
-                <!-- Model Classes -->
-                <div class="project-classes-list">
-                  <span class="classes-title">Detected Disease Classes:</span>
-                  <div class="classes-tags">
-                    <span class="class-tag">Healthy</span>
-                    <span class="class-tag">Early Blight</span>
-                    <span class="class-tag">Late Blight</span>
-                    <span class="class-tag">Leaf Mold</span>
-                    <span class="class-tag">Powdery Mildew</span>
+                <div class="project-tech-pills">
+                  <span class="tech-pill">ESP32-CAM</span>
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">TensorFlow</span>
+                  <span class="tech-pill">Machine Learning</span>
+                </div>
+
+                <div class="project-actions-strip">
+                  <span class="tag-edge-device">
+                    <i class="fas fa-microchip"></i> Edge Optical Sensor + ML Pipeline
+                  </span>
+                </div>
+              </div>
+
+              <!-- Visual Classes Graphic -->
+              <div class="project-visual-block">
+                <div class="visual-panel">
+                  <div class="panel-tag"><i class="fas fa-leaf"></i> Supported Disease Classes</div>
+                  <div class="classes-pills-wrap">
+                    <div class="disease-pill status-healthy">
+                      <i class="fas fa-shield-alt"></i>
+                      <span>Healthy</span>
+                    </div>
+                    <div class="disease-pill">
+                      <i class="fas fa-circle-exclamation"></i>
+                      <span>Early Blight</span>
+                    </div>
+                    <div class="disease-pill">
+                      <i class="fas fa-circle-exclamation"></i>
+                      <span>Late Blight</span>
+                    </div>
+                    <div class="disease-pill">
+                      <i class="fas fa-circle-exclamation"></i>
+                      <span>Leaf Mold</span>
+                    </div>
+                    <div class="disease-pill">
+                      <i class="fas fa-circle-exclamation"></i>
+                      <span>Powdery Mildew</span>
+                    </div>
                   </div>
                 </div>
-
-                <div class="project-tech-tags">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">Machine Learning</span>
-                  <span class="tech-tag">TensorFlow</span>
-                  <span class="tech-tag">ESP32-CAM</span>
-                </div>
-              </div>
-
-              <div class="project-actions">
-                <span class="tech-tag" style="color: var(--accent-secondary);"><i class="fas fa-microchip"></i> Edge AI + ML Analysis</span>
-              </div>
-            </article>
-
-            <!-- Project 2: Student Expense Tracker -->
-            <article class="project-card glass-card" data-categories="WEB">
-              <div>
-                <div class="project-card-header">
-                  <span class="project-badge">Frontend Web App</span>
-                </div>
-                <h3 class="project-title">Student Expense Tracker</h3>
-                <p class="project-desc">
-                  Developed an application to record and manage daily student expenses. Organized expenses into categories to help users monitor spending, focusing on creating a simple and user-friendly expense management solution.
-                </p>
-                <div class="project-tech-tags">
-                  <span class="tech-tag">HTML</span>
-                  <span class="tech-tag">CSS</span>
-                  <span class="tech-tag">JavaScript</span>
-                </div>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://github.com/harini311207/Student-expense-tracker" target="_blank" rel="noopener noreferrer" class="btn-project-link btn-project-github">
-                  <i class="fab fa-github"></i> VIEW GITHUB
-                </a>
-              </div>
-            </article>
-
-            <!-- Project 3: Student Grade Management System -->
-            <article class="project-card glass-card" data-categories="WEB,JAVA">
-              <div>
-                <div class="project-card-header">
-                  <span class="project-badge">Academic Management</span>
-                </div>
-                <h3 class="project-title">Student Grade Management System</h3>
-                <p class="project-desc">
-                  A web-based academic management system that digitizes student and faculty workflows. Admin can manage accounts, faculty enter marks, and the system automatically calculates totals, grades, GPA and CGPA. Students can view and print results.
-                </p>
-                <div class="project-tech-tags">
-                  <span class="tech-tag">Java</span>
-                  <span class="tech-tag">Spring Boot</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">HTML</span>
-                  <span class="tech-tag">CSS</span>
-                  <span class="tech-tag">JavaScript</span>
-                </div>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://github.com/harini311207/Student-grade-management-system" target="_blank" rel="noopener noreferrer" class="btn-project-link btn-project-github">
-                  <i class="fab fa-github"></i> VIEW GITHUB
-                </a>
               </div>
             </article>
 
@@ -469,287 +587,321 @@
       </section>
 
       <!-- ====================================================================
-           SLIDE 05: EDUCATION
+           05 — EDUCATION
            ==================================================================== -->
       <section id="slide-05" class="slide" data-slide="education" aria-label="Education">
         <div class="slide-content-wrap">
           <div class="slide-header">
-            <span class="slide-tag"><i class="fas fa-graduation-cap"></i> Slide 05</span>
-            <h2 class="slide-title">Academic <span class="gradient-text">Education</span></h2>
-            <p class="slide-subtitle">Rigorous foundational study in Computer Science and Engineering.</p>
+            <span class="section-tag">05 // ACADEMICS</span>
+            <h2 class="slide-title">Education <span class="accent-text">Timeline</span></h2>
+            <p class="slide-subtitle">Academic foundations in Computer Science and Engineering.</p>
           </div>
 
-          <div class="education-container">
-            <div class="education-timeline-card glass-card">
-              <div class="edu-badge-row">
-                <span class="project-badge">Undergraduate Degree</span>
+          <div class="education-editorial-container">
+            <div class="timeline-editorial-item">
+              <div class="timeline-marker">
+                <div class="marker-dot"></div>
+                <div class="marker-line"></div>
               </div>
-              <h3 class="edu-institution">Easwari Engineering College</h3>
-              <p class="edu-degree">B.E. Computer Science and Engineering</p>
+              <div class="timeline-content-card">
+                <div class="timeline-meta">
+                  <span class="timeline-badge">UNDERGRADUATE DEGREE</span>
+                  <span class="timeline-cgpa">CGPA: <strong>8.915</strong></span>
+                </div>
+                <h3 class="timeline-degree">B.E. Computer Science and Engineering</h3>
+                <h4 class="timeline-institution">Easwari Engineering College</h4>
+                
+                <p class="timeline-body">
+                  Engaged in thorough coursework covering essential computer science engineering principles: Object-Oriented Programming, Data Structures &amp; Algorithms, Database Management Systems, Operating Systems, Computer Networks, and Machine Learning.
+                </p>
 
-              <div class="edu-cgpa-box">
-                <span class="cgpa-label">Cumulative GPA</span>
-                <span class="cgpa-val">8.915</span>
+                <div class="timeline-pillars">
+                  <div class="pillar-item">
+                    <i class="fas fa-check-double"></i>
+                    <span>Rigorous theoretical foundations and practical laboratory implementations</span>
+                  </div>
+                  <div class="pillar-item">
+                    <i class="fas fa-check-double"></i>
+                    <span>Hands-on development of software solutions, mini-projects, and academic workflows</span>
+                  </div>
+                  <div class="pillar-item">
+                    <i class="fas fa-check-double"></i>
+                    <span>Collaborative peer learning and competitive technical participation</span>
+                  </div>
+                </div>
               </div>
-
-              <p class="edu-description">
-                Engaged in comprehensive study of computer engineering principles including Object-Oriented Programming, Data Structures & Algorithms, Database Systems, Computer Networks, and Machine Learning.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ====================================================================
-           SLIDE 06: ACHIEVEMENTS & CERTIFICATIONS
+           06 — ACHIEVEMENTS / CODING
            ==================================================================== -->
       <section id="slide-06" class="slide" data-slide="achievements" aria-label="Achievements">
         <div class="slide-content-wrap">
           <div class="slide-header">
-            <span class="slide-tag"><i class="fas fa-trophy"></i> Slide 06</span>
-            <h2 class="slide-title">Achievements & <span class="gradient-text">Certifications</span></h2>
-            <p class="slide-subtitle">Hackathons, professional industry certifications, and algorithmic problem solving.</p>
+            <span class="section-tag">06 // MILESTONES</span>
+            <h2 class="slide-title">Achievements &amp; <span class="accent-text">Coding Practice</span></h2>
+            <p class="slide-subtitle">Hackathon collaboration and algorithmic problem-solving discipline.</p>
           </div>
 
-          <div class="achievements-grid">
-            <!-- Hackathons Highlight Card -->
-            <div class="hackathon-card glass-card">
-              <div class="hackathon-big-stat">5+</div>
-              <h3 class="hackathon-stat-title">Hackathons Participated</h3>
-              <p class="hackathon-desc" style="margin-bottom: 1.25rem;">
-                Participated in 5+ Hackathons, gaining experience in teamwork, ideation, and rapid prototyping.
+          <div class="achievements-editorial-grid">
+            
+            <!-- Hackathons Milestone Card -->
+            <div class="milestone-card">
+              <div class="milestone-badge-row">
+                <i class="fas fa-trophy milestone-icon"></i>
+                <span class="milestone-tag">COMPETITIVE EVENTS</span>
+              </div>
+              <div class="milestone-large-stat">5+</div>
+              <h3 class="milestone-title">Hackathons Participated</h3>
+              <p class="milestone-desc">
+                Participated in 5+ hackathons, gaining valuable experience in teamwork, ideation, and rapid prototyping under rigorous time constraints.
               </p>
-              <div style="background: var(--surface-glass); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1rem; text-align: left;">
-                <span class="project-badge" style="margin-bottom: 0.5rem; display: inline-block;">Featured Hackathon</span>
-                <h4 style="font-size: 0.95rem; font-family: var(--font-heading); color: var(--text-primary);">HackVerse 2026: Innovate, Build, Impact</h4>
-                <p style="font-size: 0.825rem; color: var(--text-secondary); margin-top: 0.25rem;">Optimization Algorithm & Gaming — 7-hour inter-college hackathon by SIMATS Engineering.</p>
+              <div class="milestone-points">
+                <div class="point-item">
+                  <i class="fas fa-users point-icon"></i>
+                  <span>Collaborative team dynamics and division of engineering tasks</span>
+                </div>
+                <div class="point-item">
+                  <i class="fas fa-bolt point-icon"></i>
+                  <span>Rapid software design, ideation, and minimum viable product building</span>
+                </div>
               </div>
             </div>
 
-            <!-- Certifications & LeetCode Card -->
-            <div class="coding-journey-card glass-card">
-              <h3 class="identity-card-title" style="margin-bottom: 1.25rem;">
-                <i class="fas fa-certificate" style="color: var(--accent-primary); margin-right: 0.5rem;"></i>
-                Industry Certifications
-              </h3>
-              
-              <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.5rem;">
-                <div style="background: var(--surface-glass); border: 1px solid var(--border-glass); padding: 0.85rem 1rem; border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
-                  <div>
-                    <h4 style="font-size: 0.95rem; color: var(--text-primary); margin: 0;">AI Skills Passport</h4>
-                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">EY & Microsoft</p>
-                  </div>
-                  <span class="stat-pill" style="font-size: 0.725rem;">Artificial Intelligence</span>
-                </div>
-
-                <div style="background: var(--surface-glass); border: 1px solid var(--border-glass); padding: 0.85rem 1rem; border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
-                  <div>
-                    <h4 style="font-size: 0.95rem; color: var(--text-primary); margin: 0;">Turn Ideas Into Prototypes With Vibe Coding</h4>
-                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">IBM SkillsBuild</p>
-                  </div>
-                  <span class="stat-pill" style="font-size: 0.725rem;">IBM SkillsBuild</span>
-                </div>
-
-                <div style="background: var(--surface-glass); border: 1px solid var(--border-glass); padding: 0.85rem 1rem; border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center;">
-                  <div>
-                    <h4 style="font-size: 0.95rem; color: var(--text-primary); margin: 0;">MongoDB Basics for Students</h4>
-                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">MongoDB</p>
-                  </div>
-                  <span class="stat-pill" style="font-size: 0.725rem;">NoSQL Database</span>
-                </div>
+            <!-- Coding & DSA Milestone Card -->
+            <div class="milestone-card">
+              <div class="milestone-badge-row">
+                <i class="fas fa-code milestone-icon"></i>
+                <span class="milestone-tag">PROBLEM SOLVING</span>
               </div>
-
-              <div style="border-top: 1px solid var(--border-glass); padding-top: 1rem;">
-                <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 0.35rem;">
-                  <i class="fas fa-code-branch" style="color: var(--accent-emerald); margin-right: 0.4rem;"></i> Problem Solving & LeetCode Practice
-                </h4>
-                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">
-                  Active participant in LeetCode coding practice, strengthening DSA and problem-solving skills through consistent algorithmic breakdown.
-                </p>
+              <div class="milestone-tagline">DSA Practice</div>
+              <h3 class="milestone-title">Data Structures &amp; Algorithms</h3>
+              <p class="milestone-desc">
+                Actively practicing Data Structures and Algorithms to cultivate structured analytical thinking, efficient logic formulation, and systematic code optimization.
+              </p>
+              <div class="milestone-points">
+                <div class="point-item">
+                  <i class="fas fa-brain point-icon"></i>
+                  <span>Continuous practice in algorithmic challenges and problem solving</span>
+                </div>
+                <div class="point-item">
+                  <i class="fas fa-chart-line point-icon"></i>
+                  <span>Focusing on optimal time complexity, memory constraints, and edge cases</span>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
       <!-- ====================================================================
-           SLIDE 07: CURRENTLY LEARNING
+           07 — CURRENTLY LEARNING
            ==================================================================== -->
       <section id="slide-07" class="slide" data-slide="learning" aria-label="Currently Learning">
         <div class="slide-content-wrap">
           <div class="slide-header">
-            <span class="slide-tag"><i class="fas fa-book-reader"></i> Slide 07</span>
-            <h2 class="slide-title">Currently <span class="gradient-text">Learning</span></h2>
-            <p class="slide-subtitle">Active areas of focus to broaden technical depth and engineering expertise.</p>
+            <span class="section-tag">07 // ACTIVE FOCUS</span>
+            <h2 class="slide-title">Currently <span class="accent-text">Learning</span></h2>
+            <p class="slide-subtitle">Targeted technical domains and subjects currently expanding in depth.</p>
           </div>
 
-          <div class="learning-grid">
-            <div class="learning-card glass-card">
-              <span class="learning-cat">Backend & Systems</span>
-              <h3 class="learning-title">Java</h3>
-              <p class="learning-detail">Object-oriented architectures, Spring frameworks, and enterprise services.</p>
+          <div class="learning-editorial-grid">
+            
+            <!-- C++ -->
+            <div class="learning-panel">
+              <div class="learning-panel-top">
+                <span class="learning-index">01</span>
+                <i class="devicon-cplusplus-plain colored learning-logo"></i>
+              </div>
+              <h3 class="learning-name">C++</h3>
+              <p class="learning-desc">Strengthening standard template library (STL), object-oriented programming, and computational performance.</p>
             </div>
 
-            <div class="learning-card glass-card">
-              <span class="learning-cat">Systems & DSA</span>
-              <h3 class="learning-title">C</h3>
-              <p class="learning-detail">Memory management, pointers, and speed-critical algorithmic logic.</p>
+            <!-- Java -->
+            <div class="learning-panel">
+              <div class="learning-panel-top">
+                <span class="learning-index">02</span>
+                <i class="devicon-java-plain colored learning-logo"></i>
+              </div>
+              <h3 class="learning-name">Java</h3>
+              <p class="learning-desc">Deepening enterprise architectural patterns, backend modularity, and clean object design.</p>
             </div>
 
-            <div class="learning-card glass-card">
-              <span class="learning-cat">Algorithms</span>
-              <h3 class="learning-title">Data Structures & Algorithms</h3>
-              <p class="learning-detail">Advanced algorithmic paradigms, graph traversal, and time/space complexity optimization.</p>
+            <!-- Data Structures and Algorithms -->
+            <div class="learning-panel">
+              <div class="learning-panel-top">
+                <span class="learning-index">03</span>
+                <i class="fas fa-network-wired learning-logo accent-icon"></i>
+              </div>
+              <h3 class="learning-name">Data Structures and Algorithms</h3>
+              <p class="learning-desc">Advancing problem-solving capabilities, tree/graph algorithms, and complexity analysis.</p>
             </div>
 
-            <div class="learning-card glass-card">
-              <span class="learning-cat">Core Competency</span>
-              <h3 class="learning-title">Problem Solving</h3>
-              <p class="learning-detail">Breaking down complex engineering requirements into elegant, maintainable code.</p>
+            <!-- Web Development -->
+            <div class="learning-panel">
+              <div class="learning-panel-top">
+                <span class="learning-index">04</span>
+                <i class="fas fa-globe learning-logo accent-icon"></i>
+              </div>
+              <h3 class="learning-name">Web Development</h3>
+              <p class="learning-desc">Building intuitive, responsive frontends, semantic web structures, and full-stack integration.</p>
             </div>
 
-            <div class="learning-card glass-card">
-              <span class="learning-cat">Frontend & Full-Stack</span>
-              <h3 class="learning-title">Web Development</h3>
-              <p class="learning-detail">Responsive user interfaces, modern CSS architectures, and interactive web standards.</p>
+            <!-- Software Development -->
+            <div class="learning-panel">
+              <div class="learning-panel-top">
+                <span class="learning-index">05</span>
+                <i class="fas fa-laptop-code learning-logo accent-icon"></i>
+              </div>
+              <h3 class="learning-name">Software Development</h3>
+              <p class="learning-desc">Mastering software engineering workflows, version control with Git/GitHub, and modular code architecture.</p>
             </div>
 
-            <div class="learning-card glass-card">
-              <span class="learning-cat">Emerging Tech</span>
-              <h3 class="learning-title">Machine Learning</h3>
-              <p class="learning-detail">Image-based analysis, convolutional networks, and practical health monitoring systems.</p>
-            </div>
           </div>
         </div>
       </section>
 
       <!-- ====================================================================
-           SLIDE 08: RESUME
+           08 — RESUME
            ==================================================================== -->
       <section id="slide-08" class="slide" data-slide="resume" aria-label="Resume">
         <div class="slide-content-wrap">
           <div class="slide-header" style="text-align: center;">
-            <span class="slide-tag"><i class="fas fa-file-pdf"></i> Slide 08</span>
-            <h2 class="slide-title">My <span class="gradient-text">Resume</span></h2>
-            <p class="slide-subtitle" style="margin: 0.5rem auto 0;">View or download my resume.</p>
+            <span class="section-tag">08 // CURRICULUM VITAE</span>
+            <h2 class="slide-title">Official <span class="accent-text">Resume</span></h2>
+            <p class="slide-subtitle" style="margin-left: auto; margin-right: auto;">
+              Access Harini N's authentic resume PDF directly in your browser or download a copy.
+            </p>
           </div>
 
-          <div class="resume-center-box glass-card">
-            <div class="resume-icon-badge">
-              <i class="fas fa-file-lines"></i>
+          <div class="resume-editorial-card">
+            <div class="resume-hero-icon">
+              <i class="fas fa-file-pdf"></i>
             </div>
-            <h3 class="hero-headline" style="margin-bottom: 0.5rem;">Harini N — Curriculum Vitae</h3>
-            <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto;">
-              B.E. Computer Science and Engineering &bull; Easwari Engineering College (8.915 CGPA)
+            
+            <h3 class="resume-candidate-name">Harini N</h3>
+            <p class="resume-candidate-sub">
+              B.E. Computer Science and Engineering &bull; Easwari Engineering College (CGPA: 8.915)
             </p>
 
-            <div class="resume-actions-row">
-              <a href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" id="view-resume-btn" class="btn-primary">
-                <i class="fas fa-eye"></i> VIEW RESUME
+            <div class="resume-buttons-row">
+              <a href="assets/resume/resume.pdf" target="_blank" rel="noopener noreferrer" id="view-resume-btn" class="btn-primary resume-action-btn">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+                <span>VIEW RESUME</span>
               </a>
-              <a href="assets/resume/resume.pdf" download="Harini_N_Resume.pdf" id="download-resume-btn" class="btn-secondary">
-                <i class="fas fa-download"></i> DOWNLOAD RESUME
+              <a href="assets/resume/resume.pdf" download="Harini_N_Resume.pdf" id="download-resume-btn" class="btn-secondary resume-action-btn">
+                <i class="fas fa-download"></i>
+                <span>DOWNLOAD RESUME</span>
               </a>
             </div>
 
-            <p class="resume-notice">
-              <i class="fas fa-info-circle"></i> Publicly accessible directly without requiring login or third-party permissions.
-            </p>
+            <div class="resume-security-note">
+              <i class="fas fa-check-circle"></i>
+              <span>Directly linked to verified PDF asset: <code>assets/resume/resume.pdf</code>. Works without third-party auth.</span>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ====================================================================
-           SLIDE 09: CONTACT & FOOTER
+           09 — CONTACT
            ==================================================================== -->
       <section id="slide-09" class="slide" data-slide="contact" aria-label="Contact">
         <div class="slide-content-wrap">
           <div class="slide-header">
-            <span class="slide-tag"><i class="fas fa-paper-plane"></i> Slide 09</span>
-            <h2 class="slide-title">Let's <span class="gradient-text">Connect</span></h2>
-            <p class="slide-subtitle">Open to internships, project collaborations, and opportunities.</p>
+            <span class="section-tag">09 // GET IN TOUCH</span>
+            <h2 class="slide-title">Let's <span class="accent-text">Connect</span></h2>
+            <p class="slide-subtitle">Open to internships, software development opportunities, and collaborative discussions.</p>
           </div>
 
-          <div class="contact-grid">
-            <!-- Contact Direct Channels -->
-            <div class="contact-info-card glass-card">
-              <h3 class="identity-card-title">Direct Channels</h3>
-              
-              <!-- Direct Email with Copy Button -->
-              <div class="contact-direct-item">
-                <div class="contact-item-left">
-                  <i class="fas fa-envelope contact-icon"></i>
-                  <div>
-                    <span class="field-label">Email Address</span>
-                    <p class="contact-value-text">harining205@gmail.com</p>
-                  </div>
+          <div class="contact-editorial-layout">
+            
+            <!-- Direct Channels Column -->
+            <div class="contact-channels-column">
+              <h3 class="channel-heading">Direct Channels</h3>
+
+              <!-- Email Card with Copy Button -->
+              <div class="channel-card">
+                <div class="channel-icon-col">
+                  <i class="fas fa-envelope"></i>
                 </div>
-                <button id="copy-email-btn" class="btn-copy-email" title="Copy email address to clipboard">
-                  <i class="fas fa-copy"></i> Copy
+                <div class="channel-details-col">
+                  <span class="channel-label">Email Address</span>
+                  <a href="mailto:harining205@gmail.com" class="channel-link">harining205@gmail.com</a>
+                </div>
+                <button id="copy-email-btn" class="btn-copy-action" title="Copy email address to clipboard" aria-label="Copy Email">
+                  <i class="fas fa-copy"></i>
+                  <span>Copy</span>
                 </button>
               </div>
 
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/harini-neelakandan/" target="_blank" rel="noopener noreferrer" class="contact-direct-item" style="text-decoration: none;">
-                <div class="contact-item-left">
-                  <i class="fab fa-linkedin contact-icon" style="color: #0a66c2;"></i>
-                  <div>
-                    <span class="field-label">LinkedIn Profile</span>
-                    <p class="contact-value-text">linkedin.com/in/harini-neelakandan</p>
-                  </div>
+              <!-- LinkedIn Card -->
+              <a href="https://www.linkedin.com/in/harini-neelakandan/" target="_blank" rel="noopener noreferrer" class="channel-card linkable-card">
+                <div class="channel-icon-col">
+                  <i class="fab fa-linkedin-in" style="color: #0a66c2;"></i>
                 </div>
-                <i class="fas fa-arrow-up-right-from-square" style="color: var(--text-tertiary);"></i>
+                <div class="channel-details-col">
+                  <span class="channel-label">LinkedIn Profile</span>
+                  <span class="channel-link">linkedin.com/in/harini-neelakandan</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square channel-corner-arrow"></i>
               </a>
 
-              <!-- GitHub -->
-              <a href="https://github.com/harini311207" target="_blank" rel="noopener noreferrer" class="contact-direct-item" style="text-decoration: none;">
-                <div class="contact-item-left">
-                  <i class="fab fa-github contact-icon"></i>
-                  <div>
-                    <span class="field-label">GitHub Profile</span>
-                    <p class="contact-value-text">github.com/harini311207</p>
-                  </div>
+              <!-- GitHub Card -->
+              <a href="https://github.com/harini311207" target="_blank" rel="noopener noreferrer" class="channel-card linkable-card">
+                <div class="channel-icon-col">
+                  <i class="fab fa-github"></i>
                 </div>
-                <i class="fas fa-arrow-up-right-from-square" style="color: var(--text-tertiary);"></i>
+                <div class="channel-details-col">
+                  <span class="channel-label">GitHub Profile</span>
+                  <span class="channel-link">github.com/harini311207</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square channel-corner-arrow"></i>
               </a>
             </div>
 
-            <!-- Contact Form -->
-            <div class="contact-form-card glass-card">
-              <h3 class="identity-card-title" style="margin-bottom: 1rem;">Send a Message</h3>
-              
-              <form id="portfolio-contact-form" novalidate>
-                <div class="form-group">
-                  <label for="contact-name" class="form-label">Your Name</label>
-                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required>
+            <!-- Message Form Column -->
+            <div class="contact-form-column">
+              <h3 class="channel-heading">Send a Direct Message</h3>
+
+              <form id="portfolio-contact-form" class="editorial-contact-form" novalidate>
+                <div class="form-field">
+                  <label for="contact-name" class="field-label">Your Name</label>
+                  <input type="text" id="contact-name" class="field-input" placeholder="e.g. Alex Smith" required>
                 </div>
 
-                <div class="form-group">
-                  <label for="contact-email" class="form-label">Your Email</label>
-                  <input type="email" id="contact-email" class="form-input" placeholder="e.g. john@example.com" required>
+                <div class="form-field">
+                  <label for="contact-email" class="field-label">Your Email</label>
+                  <input type="email" id="contact-email" class="field-input" placeholder="e.g. alex@example.com" required>
                 </div>
 
-                <div class="form-group">
-                  <label for="contact-message" class="form-label">Message</label>
-                  <textarea id="contact-message" class="form-textarea" placeholder="Write your message here..." required></textarea>
+                <div class="form-field">
+                  <label for="contact-message" class="field-label">Message</label>
+                  <textarea id="contact-message" class="field-textarea" rows="4" placeholder="Hello Harini, I'd like to discuss an opportunity..." required></textarea>
                 </div>
 
-                <button type="submit" class="btn-primary" style="width: 100%;">
-                  <i class="fas fa-paper-plane"></i> SEND MESSAGE
+                <button type="submit" class="btn-primary form-submit-btn">
+                  <span>SEND MESSAGE</span>
+                  <i class="fas fa-paper-plane"></i>
                 </button>
 
-                <div id="form-status-msg" class="form-status-msg" role="status"></div>
+                <div id="form-status-msg" class="form-status-msg" role="status" aria-live="polite"></div>
               </form>
             </div>
+
           </div>
 
-          <!-- Slide 09 Minimal Footer -->
-          <footer class="slide-footer-bar" role="contentinfo">
-            <p>&copy; <span id="copyright-year">2026</span> Harini N. Built with passion for technology and continuous learning.</p>
-            <div class="footer-links">
-              <a href="https://github.com/harini311207" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-              <a href="https://www.linkedin.com/in/harini-neelakandan/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
-              <a href="mailto:harining205@gmail.com" class="footer-link">Email</a>
+          <!-- Minimal Footer -->
+          <footer class="slide-footer" role="contentinfo">
+            <p>&copy; <span id="copyright-year">2026</span> Harini N. Computer Science and Engineering Student.</p>
+            <div class="footer-quick-links">
+              <a href="https://github.com/harini311207" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/harini-neelakandan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="mailto:harining205@gmail.com">Email</a>
             </div>
           </footer>
         </div>
@@ -761,7 +913,7 @@
   <!-- Toast Notification element -->
   <div id="toast-notification" class="toast-notification" role="alert" aria-live="polite"></div>
 
-  <!-- Scripts -->
+  <!-- JavaScript Modules -->
   <script src="js/portfolioData.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/app.js"></script>

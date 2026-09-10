@@ -1,7 +1,7 @@
 /**
- * Harini N - Super Slider Engine
+ * Harini N - Slider Engine
  * Controls full-viewport sliding transitions, wheel debounce, touch swipe,
- * keyboard shortcuts, slide indicators, and active link states.
+ * keyboard shortcuts, slide indicators, top progress bar, and active link states.
  */
 
 class SuperSlider {
@@ -14,9 +14,10 @@ class SuperSlider {
     this.counterDisplay = document.getElementById('slide-counter-display');
     this.prevBtn = document.getElementById('slider-prev-btn');
     this.nextBtn = document.getElementById('slider-next-btn');
+    this.progressBar = document.getElementById('slide-progress-bar');
 
     this.currentIndex = 0;
-    this.totalSlides = this.slides.length;
+    this.totalSlides = this.slides.length || 9;
     this.isAnimating = false;
     this.debounceTime = 550; // ms to prevent rapid accidental skipping
     this.touchStartY = 0;
@@ -47,6 +48,9 @@ class SuperSlider {
 
     this.updateUI(false);
     this.bindEvents();
+
+    // Store instance on window for global accessibility
+    window.SuperSliderInstance = this;
   }
 
   bindEvents() {
@@ -57,36 +61,38 @@ class SuperSlider {
     window.addEventListener('keydown', (e) => this.handleKeydown(e));
 
     // 3. Touch Swipe Handling
-    this.viewport.addEventListener('touchstart', (e) => {
-      this.touchStartY = e.touches[0].clientY;
-      this.touchStartX = e.touches[0].clientX;
-    }, { passive: true });
+    if (this.viewport) {
+      this.viewport.addEventListener('touchstart', (e) => {
+        this.touchStartY = e.touches[0].clientY;
+        this.touchStartX = e.touches[0].clientX;
+      }, { passive: true });
 
-    this.viewport.addEventListener('touchend', (e) => {
-      if (!this.touchStartY || !this.touchStartX) return;
-      const touchEndY = e.changedTouches[0].clientY;
-      const touchEndX = e.changedTouches[0].clientX;
-      const diffY = this.touchStartY - touchEndY;
-      const diffX = this.touchStartX - touchEndX;
+      this.viewport.addEventListener('touchend', (e) => {
+        if (!this.touchStartY || !this.touchStartX) return;
+        const touchEndY = e.changedTouches[0].clientY;
+        const touchEndX = e.changedTouches[0].clientX;
+        const diffY = this.touchStartY - touchEndY;
+        const diffX = this.touchStartX - touchEndX;
 
-      // Check if vertical or horizontal swipe is dominant with at least 45px distance
-      if (Math.abs(diffY) > Math.abs(diffX) && Math.abs(diffY) > 45) {
-        if (diffY > 0) {
-          this.goToSlide(this.currentIndex + 1);
-        } else {
-          this.goToSlide(this.currentIndex - 1);
+        // Dominant vertical swipe with at least 45px delta
+        if (Math.abs(diffY) > Math.abs(diffX) && Math.abs(diffY) > 45) {
+          if (diffY > 0) {
+            this.goToSlide(this.currentIndex + 1);
+          } else {
+            this.goToSlide(this.currentIndex - 1);
+          }
+        } else if (Math.abs(diffX) > 50) {
+          if (diffX > 0) {
+            this.goToSlide(this.currentIndex + 1);
+          } else {
+            this.goToSlide(this.currentIndex - 1);
+          }
         }
-      } else if (Math.abs(diffX) > 45) {
-        if (diffX > 0) {
-          this.goToSlide(this.currentIndex + 1);
-        } else {
-          this.goToSlide(this.currentIndex - 1);
-        }
-      }
 
-      this.touchStartY = 0;
-      this.touchStartX = 0;
-    }, { passive: true });
+        this.touchStartY = 0;
+        this.touchStartX = 0;
+      }, { passive: true });
+    }
 
     // 4. Side Indicators click
     this.indicators.forEach((indicator, index) => {
@@ -104,13 +110,34 @@ class SuperSlider {
         }
         // Close mobile menu if open
         const navMenu = document.getElementById('nav-links-menu');
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
         if (navMenu && navMenu.classList.contains('open')) {
           navMenu.classList.remove('open');
+          if (mobileToggle) {
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) icon.className = 'fas fa-bars';
+          }
         }
       });
     });
 
-    // 6. Bottom arrow buttons
+    // 6. Any in-page jump links (e.g. Hero buttons: View Projects, View Resume, Contact Me)
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      // Exclude nav links already bound
+      if (anchor.classList.contains('nav-link')) return;
+
+      anchor.addEventListener('click', (e) => {
+        const href = anchor.getAttribute('href').replace('#', '').toLowerCase();
+        const targetIdx = this.slideIds.indexOf(href);
+        if (targetIdx !== -1) {
+          e.preventDefault();
+          this.goToSlide(targetIdx);
+        }
+      });
+    });
+
+    // 7. Bottom arrow buttons
     if (this.prevBtn) {
       this.prevBtn.addEventListener('click', () => this.goToSlide(this.currentIndex - 1));
     }
@@ -118,12 +145,12 @@ class SuperSlider {
       this.nextBtn.addEventListener('click', () => this.goToSlide(this.currentIndex + 1));
     }
 
-    // 7. Window resize
+    // 8. Window resize
     window.addEventListener('resize', () => {
       this.updateSlidePosition(false);
     });
 
-    // 8. Popstate (back/forward browser buttons)
+    // 9. Popstate (browser back/forward)
     window.addEventListener('popstate', () => {
       const hash = window.location.hash.replace('#', '').toLowerCase();
       const targetIdx = this.slideIds.indexOf(hash);
@@ -136,17 +163,18 @@ class SuperSlider {
   handleWheel(e) {
     // If the event target is inside an element that has inner scroll, check scroll boundaries
     const currentSlide = this.slides[this.currentIndex];
-    const isScrollable = currentSlide.scrollHeight > currentSlide.clientHeight;
+    if (currentSlide) {
+      const isScrollable = currentSlide.scrollHeight > currentSlide.clientHeight;
+      if (isScrollable) {
+        const atTop = currentSlide.scrollTop <= 5;
+        const atBottom = currentSlide.scrollHeight - currentSlide.scrollTop - currentSlide.clientHeight <= 5;
 
-    if (isScrollable) {
-      const atTop = currentSlide.scrollTop <= 5;
-      const atBottom = currentSlide.scrollHeight - currentSlide.scrollTop - currentSlide.clientHeight <= 5;
-
-      if (e.deltaY > 0 && !atBottom) {
-        return; // Allow natural inner scroll down
-      }
-      if (e.deltaY < 0 && !atTop) {
-        return; // Allow natural inner scroll up
+        if (e.deltaY > 0 && !atBottom) {
+          return; // Allow natural inner scroll down
+        }
+        if (e.deltaY < 0 && !atTop) {
+          return; // Allow natural inner scroll up
+        }
       }
     }
 
@@ -154,9 +182,9 @@ class SuperSlider {
 
     if (this.isAnimating) return;
 
-    if (e.deltaY > 20) {
+    if (e.deltaY > 25) {
       this.goToSlide(this.currentIndex + 1);
-    } else if (e.deltaY < -20) {
+    } else if (e.deltaY < -25) {
       this.goToSlide(this.currentIndex - 1);
     }
   }
@@ -219,6 +247,7 @@ class SuperSlider {
     this.updateIndicators();
     this.updateNavLinks();
     this.updateControls();
+    this.updateProgressBar();
   }
 
   updateSlidePosition(animate = true) {
@@ -266,7 +295,14 @@ class SuperSlider {
       this.nextBtn.disabled = this.currentIndex === this.totalSlides - 1;
     }
   }
+
+  updateProgressBar() {
+    if (this.progressBar) {
+      const percentage = ((this.currentIndex + 1) / this.totalSlides) * 100;
+      this.progressBar.style.width = `${percentage}%`;
+    }
+  }
 }
 
-// Export / Attach to global window
+// Attach to window
 window.SuperSlider = SuperSlider;

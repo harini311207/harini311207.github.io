@@ -1,4 +1,6 @@
 @echo off
+setlocal
+set PATH=%PATH%;C:\Users\LENOVO\AppData\Local\Programs\Git\cmd;C:\Users\LENOVO\AppData\Local\Programs\gh\bin
 echo =========================================================================
 echo HARINI N PORTFOLIO - 1-CLICK GITHUB PAGES DEPLOYMENT
 echo =========================================================================

@@ -1,0 +1,129 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 2538 >>
+stream
+BT
+/F1 22 Tf
+50 780 Td
+(HARINI N) Tj
+/F2 10 Tf
+0 -20 Td
+(B.E. Computer Science and Engineering | Easwari Engineering College | CGPA: 8.915) Tj
+0 -15 Td
+(Email: harining205@gmail.com | LinkedIn: linkedin.com/in/harini-neelakandan | GitHub: github.com/harini311207) Tj
+
+/F1 12 Tf
+0 -30 Td
+(CAREER OBJECTIVE) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Computer Science Engineering student with a strong interest in software development, problem solving, and emerging) Tj
+0 -13 Td
+(technologies. Actively building skills through coding practice, projects, certifications, and hackathons, with a goal) Tj
+0 -13 Td
+(of gaining practical industry experience through an internship.) Tj
+
+/F1 12 Tf
+0 -26 Td
+(TECHNICAL SKILLS) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Programming: Python, Java, C) Tj
+0 -14 Td
+(Core: Data Structures & Algorithms, Problem Solving) Tj
+0 -14 Td
+(Database: MongoDB) Tj
+0 -14 Td
+(Areas: Web Development, Machine Learning) Tj
+0 -14 Td
+(Tools: Git, GitHub) Tj
+
+/F1 12 Tf
+0 -26 Td
+(PROJECTS) Tj
+/F1 10.5 Tf
+0 -16 Td
+(Plant Disease Detector) Tj
+/F2 9.5 Tf
+0 -14 Td
+(- Developed a project focused on identifying plant diseases using image-based analysis.) Tj
+0 -13 Td
+(- Explored machine learning concepts for disease classification and early detection.) Tj
+0 -13 Td
+(- Designed the solution with practical application for supporting plant health monitoring.) Tj
+
+/F1 10.5 Tf
+0 -18 Td
+(Student Expense Tracker) Tj
+/F2 9.5 Tf
+0 -14 Td
+(- Developed an application to record and manage daily student expenses.) Tj
+0 -13 Td
+(- Organized expenses into categories to help users monitor spending.) Tj
+0 -13 Td
+(- Focused on creating a simple and user-friendly expense management solution.) Tj
+
+/F1 12 Tf
+0 -26 Td
+(HACKATHONS & ACHIEVEMENTS) Tj
+/F2 9.5 Tf
+0 -16 Td
+(- Participated in 5+ Hackathons, gaining experience in teamwork, ideation, and rapid prototyping.) Tj
+0 -14 Td
+(- Participated in HackVerse 2026: Innovate, Build, Impact - Optimization Algorithm & Gaming,) Tj
+0 -13 Td
+(  a 7-hour inter-college hackathon conducted by SIMATS Engineering.) Tj
+0 -14 Td
+(- Active participant in LeetCode coding practice, strengthening DSA and problem-solving skills.) Tj
+
+/F1 12 Tf
+0 -26 Td
+(CERTIFICATIONS) Tj
+/F2 9.5 Tf
+0 -16 Td
+(- AI Skills Passport - EY & Microsoft) Tj
+0 -14 Td
+(- Turn Ideas Into Prototypes With Vibe Coding - IBM SkillsBuild) Tj
+0 -14 Td
+(- MongoDB Basics for Students - MongoDB) Tj
+
+/F1 12 Tf
+0 -26 Td
+(EDUCATION) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Easwari Engineering College - B.E. Computer Science and Engineering) Tj
+0 -14 Td
+(Cumulative GPA: 8.915) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000257 00000 n 
+0000002847 00000 n 
+0000002922 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2992
+%%EOF

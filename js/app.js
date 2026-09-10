@@ -1,11 +1,11 @@
 /**
  * Harini N - Main Application Controller
- * Handles Theme Toggling, Project Filtering, Contact Form, Toast Feedback,
- * and Interactive Micro-animations.
+ * Handles Theme Toggling, Mobile Menu, Contact Submission, Email Copying,
+ * and Toast Notifications.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Super Slider Engine
+  // 1. Initialize Slider Engine
   const slider = new SuperSlider();
 
   // 2. Initialize Theme (Dark default, persisted via localStorage)
@@ -14,16 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Initialize Mobile Navigation Menu
   initMobileMenu();
 
-  // 4. Initialize Projects Filtering
-  initProjectFilters();
-
-  // 5. Initialize Contact Form & Email Copying
+  // 4. Initialize Contact Form & Email Copying
   initContactForm();
 
-  // 6. Initialize Resume Handlers
-  initResumeHandlers();
-
-  // 7. Update Dynamic Year
+  // 5. Update Dynamic Year in Footer
   initFooterYear();
 });
 
@@ -93,36 +87,6 @@ function initMobileMenu() {
 }
 
 /* ==========================================================================
-   PROJECT FILTERING (ALL, WEB, JAVA, PYTHON, ML)
-   ========================================================================== */
-function initProjectFilters() {
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterValue = btn.getAttribute('data-filter');
-
-      projectCards.forEach((card) => {
-        const categories = card.getAttribute('data-categories') || '';
-        const catArray = categories.split(',').map((c) => c.trim().toUpperCase());
-
-        if (filterValue === 'ALL' || catArray.includes(filterValue.toUpperCase())) {
-          card.style.display = 'flex';
-          card.style.opacity = '1';
-          card.style.transform = 'scale(1)';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-/* ==========================================================================
    CONTACT FORM & EMAIL COPY
    ========================================================================== */
 function initContactForm() {
@@ -130,13 +94,13 @@ function initContactForm() {
   const statusMsg = document.getElementById('form-status-msg');
   const copyEmailBtn = document.getElementById('copy-email-btn');
 
-  // 1. Copy Email Button
+  // 1. 1-Click Email Copy
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', async () => {
       const email = 'harining205@gmail.com';
       try {
         await navigator.clipboard.writeText(email);
-        showToast('Copied email to clipboard: ' + email);
+        showToast('Email copied to clipboard: ' + email);
       } catch (err) {
         // Fallback for older browsers
         const tempInput = document.createElement('input');
@@ -145,12 +109,12 @@ function initContactForm() {
         tempInput.select();
         document.execCommand('copy');
         document.body.removeChild(tempInput);
-        showToast('Copied email to clipboard: ' + email);
+        showToast('Email copied to clipboard: ' + email);
       }
     });
   }
 
-  // 2. Contact Form Submission
+  // 2. Direct Message Form
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -163,11 +127,10 @@ function initContactForm() {
       const email = emailInput.value.trim();
       const message = messageInput.value.trim();
 
-      // Clear previous status
+      // Reset previous status
       statusMsg.className = 'form-status-msg';
       statusMsg.textContent = '';
 
-      // Validation
       if (!name || !email || !message) {
         statusMsg.className = 'form-status-msg error';
         statusMsg.textContent = 'Please fill out all fields before sending.';
@@ -181,7 +144,7 @@ function initContactForm() {
         return;
       }
 
-      // Safe mailto submission (no fake server needed, 100% reliable for static sites)
+      // Compose mailto
       const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
       const body = encodeURIComponent(
         `Hi Harini,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`
@@ -191,50 +154,11 @@ function initContactForm() {
       statusMsg.className = 'form-status-msg success';
       statusMsg.textContent = 'Opening your email client to send message...';
 
-      // Open email client safely
       setTimeout(() => {
         window.location.href = mailtoUrl;
-      }, 500);
+      }, 400);
 
       contactForm.reset();
-    });
-  }
-}
-
-/* ==========================================================================
-   RESUME ACTIONS & FALLBACK HANDLER
-   ========================================================================== */
-function initResumeHandlers() {
-  const viewResumeBtn = document.getElementById('view-resume-btn');
-  const downloadResumeBtn = document.getElementById('download-resume-btn');
-
-  // Check if resume PDF exists via HEAD request
-  async function checkResumeExists() {
-    try {
-      const response = await fetch('assets/resume/resume.pdf', { method: 'HEAD' });
-      return response.ok;
-    } catch {
-      return false;
-    }
-  }
-
-  if (viewResumeBtn) {
-    viewResumeBtn.addEventListener('click', async (e) => {
-      const exists = await checkResumeExists();
-      if (!exists) {
-        e.preventDefault();
-        showToast('Resume PDF will be available once placed in assets/resume/resume.pdf');
-      }
-    });
-  }
-
-  if (downloadResumeBtn) {
-    downloadResumeBtn.addEventListener('click', async (e) => {
-      const exists = await checkResumeExists();
-      if (!exists) {
-        e.preventDefault();
-        showToast('Resume PDF will be available once placed in assets/resume/resume.pdf');
-      }
     });
   }
 }
@@ -252,7 +176,7 @@ function initFooterYear() {
 /* ==========================================================================
    TOAST NOTIFICATION HELPER
    ========================================================================== */
-function showToast(message, duration = 3200) {
+function showToast(message, duration = 3000) {
   let toast = document.getElementById('toast-notification');
   if (!toast) {
     toast = document.createElement('div');
@@ -261,7 +185,7 @@ function showToast(message, duration = 3200) {
     document.body.appendChild(toast);
   }
 
-  toast.innerHTML = `<i class="fas fa-info-circle"></i> <span>${message}</span>`;
+  toast.innerHTML = `<i class="fas fa-check-circle" style="color: var(--accent-emerald);"></i> <span>${message}</span>`;
   toast.classList.add('show');
 
   if (window.toastTimer) clearTimeout(window.toastTimer);
