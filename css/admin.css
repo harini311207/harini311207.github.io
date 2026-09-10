@@ -1,0 +1,225 @@
+/* ==========================================================================
+   HARINI N - OWNER / ADMIN PORTAL STYLESHEET
+   Clean, modern dashboard for managing portfolio data securely
+   ========================================================================== */
+
+:root {
+  --admin-bg: #0b0f19;
+  --admin-surface: #111827;
+  --admin-card: rgba(17, 24, 39, 0.85);
+  --admin-border: rgba(255, 255, 255, 0.1);
+  --admin-text: #f9fafb;
+  --admin-muted: #9ca3af;
+  --admin-primary: #6366f1;
+  --admin-primary-hover: #4f46e5;
+  --admin-danger: #ef4444;
+  --admin-success: #10b981;
+}
+
+body.admin-body {
+  background-color: var(--admin-bg);
+  color: var(--admin-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto !important;
+}
+
+.admin-header {
+  height: 70px;
+  background: var(--admin-surface);
+  border-bottom: 1px solid var(--admin-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.admin-brand {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.admin-badge {
+  background: rgba(99, 102, 241, 0.2);
+  color: var(--admin-primary);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.admin-container {
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem 5rem;
+}
+
+/* Auth Card */
+.auth-box {
+  max-width: 420px;
+  margin: 6rem auto 0;
+  background: var(--admin-card);
+  border: 1px solid var(--admin-border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.auth-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--admin-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin: 0 auto 1.5rem;
+}
+
+.admin-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  color: var(--admin-text);
+  font-size: 0.95rem;
+  outline: none;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  box-sizing: border-box;
+}
+
+.admin-input:focus {
+  border-color: var(--admin-primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+.admin-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  color: var(--admin-text);
+  font-size: 0.95rem;
+  outline: none;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  min-height: 90px;
+  box-sizing: border-box;
+}
+
+.admin-textarea:focus {
+  border-color: var(--admin-primary);
+}
+
+.admin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.admin-btn-primary {
+  background: var(--admin-primary);
+  color: #ffffff;
+}
+
+.admin-btn-primary:hover {
+  background: var(--admin-primary-hover);
+}
+
+.admin-btn-outline {
+  background: transparent;
+  border: 1px solid var(--admin-border);
+  color: var(--admin-text);
+}
+
+.admin-btn-outline:hover {
+  border-color: var(--admin-primary);
+  color: var(--admin-primary);
+}
+
+.admin-btn-danger {
+  background: var(--admin-danger);
+  color: #ffffff;
+}
+
+.admin-section-card {
+  background: var(--admin-card);
+  border: 1px solid var(--admin-border);
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.admin-sec-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--admin-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Projects Table / Cards */
+.admin-proj-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--admin-border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-proj-info h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.admin-proj-info p {
+  margin: 0;
+  color: var(--admin-muted);
+  font-size: 0.85rem;
+}
+
+.admin-export-box {
+  background: #060911;
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  max-height: 250px;
+  overflow-y: auto;
+  white-space: pre;
+}

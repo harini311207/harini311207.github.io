@@ -1,0 +1,108 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1935 >>
+stream
+BT
+/F1 24 Tf
+50 740 Td
+(HARINI N) Tj
+/F2 12 Tf
+0 -22 Td
+(Computer Science and Engineering Student | Developer | Problem Solver) Tj
+0 -18 Td
+(Email: harining205@gmail.com | LinkedIn: linkedin.com/in/harini-neelakandan | GitHub: github.com/harini311207) Tj
+
+/F1 14 Tf
+0 -36 Td
+(EDUCATION) Tj
+/F2 11 Tf
+0 -18 Td
+(Easwari Engineering College - B.E. Computer Science and Engineering) Tj
+0 -15 Td
+(Cumulative GPA: 8.915) Tj
+
+/F1 14 Tf
+0 -32 Td
+(TECHNICAL SKILLS) Tj
+/F2 11 Tf
+0 -18 Td
+(Programming Languages: Python, Java, C++) Tj
+0 -15 Td
+(Web Development: HTML, CSS, JavaScript) Tj
+0 -15 Td
+(Technologies & Databases: Spring Boot, MySQL) Tj
+0 -15 Td
+(Core Strengths: Data Structures & Algorithms, Problem Solving, Software Engineering) Tj
+
+/F1 14 Tf
+0 -32 Td
+(PROJECTS) Tj
+/F1 11 Tf
+0 -18 Td
+(1. Student Grade Management System) Tj
+/F2 10 Tf
+0 -15 Td
+(   - Web-based academic management system digitizing student and faculty workflows.) Tj
+0 -13 Td
+(   - Calculates total, GPA, CGPA automatically. Tech: Java, Spring Boot, MySQL, HTML, CSS, JS.) Tj
+0 -13 Td
+(   - Repository: https://github.com/harini311207/Student-grade-management-system) Tj
+
+/F1 11 Tf
+0 -18 Td
+(2. Student Expense Tracker) Tj
+/F2 10 Tf
+0 -15 Td
+(   - Web application for tracking and managing daily student expenses. Tech: HTML, CSS, JavaScript.) Tj
+0 -13 Td
+(   - Repository: https://github.com/harini311207/Student-expense-tracker) Tj
+
+/F1 11 Tf
+0 -18 Td
+(3. Plant Disease Detector) Tj
+/F2 10 Tf
+0 -15 Td
+(   - Machine learning based disease detection using ESP32-CAM, Python and TensorFlow.) Tj
+0 -13 Td
+(   - Detects classes: Healthy, Early Blight, Late Blight, Leaf Mold, Powdery Mildew.) Tj
+
+/F1 14 Tf
+0 -32 Td
+(ACHIEVEMENTS & CODING JOURNEY) Tj
+/F2 11 Tf
+0 -18 Td
+(Hackathons: Participated in 5+ Hackathons building hands-on collaborative solutions.) Tj
+0 -15 Td
+(Coding: Consistent practice in Data Structures and Algorithms and LeetCode problem solving.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000257 00000 n 
+0000002244 00000 n 
+0000002319 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2389
+%%EOF
